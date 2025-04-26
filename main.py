@@ -16,6 +16,15 @@ def sort_list(items, ascending=True):
 
     return sorted(items, reverse=(not ascending))
 
+def translate_messages_to_english():
+    messages = {
+        "file_argument": "The file must be specified as the first argument",
+        "duplicates_argument": "The second argument indicates whether duplicates should be removed",
+        "reading_file": "The words will be read from the file",
+        "file_not_found": "The file does not exist",
+        "total_words": "Total words",
+    }
+    return messages
 
 def remove_duplicates_from_list(items):
     return list(set(items))
