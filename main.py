@@ -21,6 +21,11 @@ def remove_duplicates_from_list(items):
     return list(set(items))
 
 
+def count_words(items):
+    """Cuenta cuántas palabras hay en la lista."""
+    return len(items)
+
+
 if __name__ == "__main__":
     filename = DEFAULT_FILENAME
     remove_duplicates = DEFAULT_DUPLICATES
@@ -45,5 +50,8 @@ if __name__ == "__main__":
 
     if remove_duplicates:
         word_list = remove_duplicates_from_list(word_list)
+
+    total_words = count_words(word_list)
+    print(f"Total de palabras: {total_words}")
 
     print(sort_list(word_list))
