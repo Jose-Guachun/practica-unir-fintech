@@ -54,4 +54,5 @@ if __name__ == "__main__":
     total_words = count_words(word_list)
     print(f"Total de palabras: {total_words}")
 
+
     print(sort_list(word_list))
