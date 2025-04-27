@@ -29,6 +29,20 @@ def translate_messages_to_english():
 def remove_duplicates_from_list(items):
     return list(set(items))
 
+def filter_words_by_length(words, min_length=1):
+    """
+    Filtra las palabras de una lista según una longitud mínima.
+
+    Args:
+        words (list): Lista de palabras.
+        min_length (int): Longitud mínima de las palabras a incluir.
+
+    Returns:
+        list: Lista de palabras que cumplen con la longitud mínima.
+    """
+    if not isinstance(words, list):
+        raise RuntimeError(f"Se esperaba una lista, pero se recibió {type(words)}")
+    return [word for word in words if len(word) >= min_length]
 
 def count_words(items):
     """Cuenta cuántas palabras hay en la lista."""
