@@ -15,3 +15,9 @@ Este proyecto está diseñado para practicar el flujo de trabajo de Pull Request
 6. **Merge del Pull Request**: Una vez aprobado, realiza el merge del Pull Request a la rama principal. Elimina la rama utilizada si ya no es necesaria.
 
 Este flujo fomenta la colaboración, la revisión de código y la calidad en el desarrollo del proyecto.
+
+# Integrantes del Grupo
+Armijo Quito, Jorge Luis 
+Peñaranda Sarmiento, Jonnathan Esteban 
+Guachun Saldaña, José Luis 
+Tola Romero, Maria Daniela 
