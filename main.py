@@ -5,6 +5,7 @@ Organization: UNIR
 
 import os
 import sys
+from collections import Counter
 
 DEFAULT_FILENAME = "words.txt"
 DEFAULT_DUPLICATES = False
@@ -48,6 +49,12 @@ def count_words(items):
     """Cuenta cuántas palabras hay en la lista."""
     return len(items)
 
+def count_words_with_counter(items):
+    """Cuenta cuántas palabras hay en la lista."""
+    if not isinstance(items, list):
+        raise RuntimeError(f"No puede contar las palabras en {type(items)}")
+    return Counter(items)
+
 
 if __name__ == "__main__":
     filename = DEFAULT_FILENAME
@@ -73,6 +80,12 @@ if __name__ == "__main__":
 
     if remove_duplicates:
         word_list = remove_duplicates_from_list(word_list)
+    else:
+        duplicate_count = count_words_with_counter(word_list)
+        print(f"Palabras duplicadas: {duplicate_count}")
+        for word, count in duplicate_count.items():
+            if count > 1:
+                print(f"{word}: {count} veces")
 
     total_words = count_words(word_list)
     print(f"Total de palabras: {total_words}")
